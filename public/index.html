@@ -26,11 +26,14 @@
   <title>E R P</title>
 
   <script type="text/javascript">
+  //to create cookie
     function createCookie(cookieName, cookieValue, daysToExpire) {
       var date = new Date();
       date.setTime(date.getTime() + (daysToExpire * 24 * 60 * 60 * 1000));
       document.cookie = cookieName + "=" + cookieValue + "; expires=" + date.toGMTString();
     }
+
+    //to access the cookie
     function accessCookie(cookieName) {
       var name = cookieName + "=";
       var allCookieArray = document.cookie.split(';');
@@ -41,6 +44,8 @@
       }
       return "";
     }
+
+    //a greeting with which displayes the cookie content
     function checkCookie() {
       var user = accessCookie("testCookie");
       if (user != "")
